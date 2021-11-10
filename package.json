@@ -1,0 +1,25 @@
+{
+  "name": "tarea-4-datos-2-proofofconcept",
+  "version": "1.0.0",
+  "description": "Tarea-4-Datos-2-ProofOfConcept",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanda0712/Tarea-4-Datos-2-ProofOfConcept.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanda0712/Tarea-4-Datos-2-ProofOfConcept/issues"
+  },
+  "homepage": "https://github.com/juanda0712/Tarea-4-Datos-2-ProofOfConcept#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0"
+  }
+}
