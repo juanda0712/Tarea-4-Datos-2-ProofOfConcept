@@ -15,7 +15,7 @@ router.get('/getUsers',(req, res)=>{
 
 router.post('/addUser',(req, res)=>{
     try{
-        user.insertMany([{name: req.body.name, last_name: req.body.last_name, code: req.body.code}], 
+        User.insertMany([{name: req.body.name, last_name: req.body.last_name, code: req.body.code}], 
             (err) =>{
                 if(err){
                     console.log('Error while POST');
@@ -29,9 +29,9 @@ router.post('/addUser',(req, res)=>{
 })
 
 //UPDATE
-router.put('/updateCourse/:key', (req, res) =>{
+router.put('/updateUser/:key', (req, res) =>{
     const { key } = req.params;
-    user.findOneAndUpdate({code: key},
+    User.findOneAndUpdate({code: key},
         {
             name : req.body.name,
             last_name : req.body.last_name,
@@ -49,11 +49,11 @@ router.put('/updateCourse/:key', (req, res) =>{
 
 router.delete('/deleteUser/:key',(req,res) =>{
     const {key} = req.params;
-    user.findOneAndDelete({code: key}, (err, doc) =>{
+    User.findOneAndDelete({code: key}, (err, doc) =>{
         if(err){
             console.log(err);
         }else{
-            user.json(doc);
+            res.send(doc);
         }
     })
 })
